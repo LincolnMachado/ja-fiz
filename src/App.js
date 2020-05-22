@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Main from "./Main";
 import Header from "./Header";
 import Banner from "./Banner";
+import { useLocalStorageState } from "./my-hooks";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useLocalStorageState("tasks", []);
 
   return (
     <div>
